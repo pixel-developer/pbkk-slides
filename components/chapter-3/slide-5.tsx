@@ -31,7 +31,11 @@ export default function Slide4() {
           </p>
           <p className="text-sm mt-0.5">
             Refer to{" "}
-            <Link href="" className="font-semibold">
+            <Link
+              href="https://i.ibb.co/vvh8R0s/Untitled-2023-02-20-0812.png"
+              target="_blank"
+              className="font-semibold"
+            >
               this link
             </Link>{" "}
             for GitHub project push instructions
