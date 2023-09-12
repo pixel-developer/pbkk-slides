@@ -11,7 +11,8 @@ import Slide2 from "@/components/chapter-3/slide-2";
 import Slide3 from "@/components/chapter-3/slide-3";
 import Slide4 from "@/components/chapter-3/slide-4";
 import Slide5 from "@/components/chapter-3/slide-5";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const slides = [
   "?current-slide=1",
@@ -55,6 +56,15 @@ export default function Chapter2Page() {
 
   return (
     <div className="relative h-screen w-full">
+      <Link
+        href="/"
+        className="absolute top-10 left-10 text-sm font-medium opacity-50 hover:opacity-100 hover:bg-zinc-100 px-4 py-2 rounded-md transition-all duration-300 ease-in-out"
+      >
+        <div className="flex items-center gap-2">
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to home</span>
+        </div>
+      </Link>
       <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         <AnimatePresence>{currentSlide === "1" && <Slide1 />}</AnimatePresence>
       </div>
