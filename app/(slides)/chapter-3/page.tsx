@@ -6,12 +6,20 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 // Slides
-import Slide1 from "@/components/chapter-2/slide-1";
-import Slide2 from "@/components/chapter-2/slide-2";
-import Slide3 from "@/components/chapter-2/slide-3";
+import Slide1 from "@/components/chapter-3/slide-1";
+import Slide2 from "@/components/chapter-3/slide-2";
+import Slide3 from "@/components/chapter-3/slide-3";
+import Slide4 from "@/components/chapter-3/slide-4";
+import Slide5 from "@/components/chapter-3/slide-5";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const slides = ["?current-slide=1", "?current-slide=2", "?current-slide=3"];
+const slides = [
+  "?current-slide=1",
+  "?current-slide=2",
+  "?current-slide=3",
+  "?current-slide=4",
+  "?current-slide=5",
+];
 
 export default function Chapter2Page() {
   const router = useRouter();
@@ -55,6 +63,12 @@ export default function Chapter2Page() {
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         <AnimatePresence>{currentSlide === "3" && <Slide3 />}</AnimatePresence>
+      </div>
+      <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+        <AnimatePresence>{currentSlide === "4" && <Slide4 />}</AnimatePresence>
+      </div>
+      <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+        <AnimatePresence>{currentSlide === "5" && <Slide5 />}</AnimatePresence>
       </div>
       <div className="flex justify-center">
         <div className="absolute bottom-10 space-x-4">
